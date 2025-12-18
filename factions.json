@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": "law",
-      "icon": "🚔",
+      "icon": "🚔1",
       "title": "Rendvédelmi frakciók",
       "subtitle": "Városi rendőrségek és közrendvédelem",
       "tag": "Jog & Rend",
@@ -167,3 +167,4 @@
     }
   ]
 }
+
