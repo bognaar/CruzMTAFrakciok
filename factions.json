@@ -1,0 +1,169 @@
+{
+  "categories": [
+    {
+      "id": "law",
+      "icon": "🚔",
+      "title": "Rendvédelmi frakciók",
+      "subtitle": "Városi rendőrségek és közrendvédelem",
+      "tag": "Jog & Rend",
+      "factions": [
+        {
+          "name": "LSPD",
+          "index": 1,
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "John_Marshall", "discord": "johnmarshall#1023" },
+          "coleaders": [
+            { "name": "Michael_Rivera", "discord": "mrivera#3344" },
+            { "name": "Daniel_Woods", "discord": "dwoods#7781" }
+          ],
+          "members": 24
+        },
+        {
+          "name": "SFPD",
+          "index": 2,
+          "status": "Nem elérhető",
+          "statusType": "closed",
+          "leader": { "name": "Kevin_Stone", "discord": "kstone#5512" },
+          "coleaders": [
+            { "name": "Alex_Brown", "discord": "abrown#2048" }
+          ],
+          "members": 18
+        }
+      ]
+    },
+    {
+      "id": "medical",
+      "icon": "🏥",
+      "title": "Egészségügyi frakciók",
+      "subtitle": "Mentők és kórházi személyzet",
+      "tag": "Medical",
+      "factions": [
+        {
+          "name": "LSMS",
+          "index": 1,
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Sarah_Johnson", "discord": "sjohnson#6190" },
+          "coleaders": [
+            { "name": "Emily_Carter", "discord": "ecarter#4401" }
+          ],
+          "members": 16
+        }
+      ]
+    },
+    {
+      "id": "military",
+      "icon": "⚔️",
+      "title": "Katonai / kormányzati",
+      "subtitle": "Nemzeti gárda és állami szervek",
+      "tag": "State",
+      "factions": [
+        {
+          "name": "SANG",
+          "index": 1,
+          "status": "Nem elérhető",
+          "statusType": "closed",
+          "leader": { "name": "Robert_Hill", "discord": "rhill#9002" },
+          "coleaders": [
+            { "name": "Thomas_Lee", "discord": "tlee#3819" }
+          ],
+          "members": 12
+        }
+      ]
+    },
+    {
+      "id": "illegal",
+      "icon": "⚫",
+      "title": "Illegális frakciók",
+      "subtitle": "Maffiák, kartellek, szervezett bűnözés",
+      "tag": "Underworld",
+      "factions": [
+        {
+          "name": "Italian Mafia",
+          "index": 1,
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Marco_Rossi", "discord": "mrossi#6667" },
+          "coleaders": [
+            { "name": "Luca_Bianchi", "discord": "lbianchi#1109" }
+          ],
+          "members": 22
+        },
+        {
+          "name": "Mexican Cartel",
+          "index": 2,
+          "status": "Nem elérhető",
+          "statusType": "closed",
+          "leader": { "name": "Carlos_Mendez", "discord": "cmendez#7070" },
+          "coleaders": [
+            { "name": "Javier_Morales", "discord": "jmorales#8893" }
+          ],
+          "members": 19
+        }
+      ]
+    },
+    {
+      "id": "gangs",
+      "icon": "🔥",
+      "title": "Bandák",
+      "subtitle": "Utcai bandák, hood frakciók",
+      "tag": "Gang Territory",
+      "factions": [
+        {
+          "name": "Grove Street Families",
+          "index": 1,
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Sean_Johnson", "discord": "sjohnson_gsf#3210" },
+          "coleaders": [
+            { "name": "Andre_Wilson", "discord": "awilson#5566" }
+          ],
+          "members": 28
+        },
+        {
+          "name": "Ballas Gang",
+          "index": 2,
+          "status": "Nem elérhető",
+          "statusType": "closed",
+          "leader": { "name": "Victor_Price", "discord": "vprice#7788" },
+          "coleaders": [
+            { "name": "Ryan_Taylor", "discord": "rtaylor#9921" }
+          ],
+          "members": 20
+        }
+      ]
+    },
+    {
+      "id": "companies",
+      "icon": "💼",
+      "title": "Vállalatok / cégek",
+      "subtitle": "Médiacégek, szervizek, szolgáltatók",
+      "tag": "Business",
+      "factions": [
+        {
+          "name": "SANN",
+          "index": 1,
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Olivia_Kent", "discord": "okent#1357" },
+          "coleaders": [
+            { "name": "Peter_Clark", "discord": "pclark#2468" }
+          ],
+          "members": 14
+        },
+        {
+          "name": "TransFender Customs",
+          "index": 2,
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Brian_Miller", "discord": "bmiller#8642" },
+          "coleaders": [
+            { "name": "Jason_White", "discord": "jwhite#9753" }
+          ],
+          "members": 11
+        }
+      ]
+    }
+  ]
+}

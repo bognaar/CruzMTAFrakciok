@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>MTA RP – Aktív Frakciók</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* --- ugyanaz a design, mint korábban, rövidítve hagyva --- */
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --border-soft: #1f2937;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background: radial-gradient(circle at top,#1e293b 0,#020617 55%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 16px 48px;
+      display: flex;
+      justify-content: center;
+    }
+    .container { width: 100%; max-width: 1120px; }
+    .page-header {
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:24px; padding:18px 24px;
+      background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(236,72,153,0.05));
+      border-radius:18px; border:1px solid rgba(148,163,184,0.35);
+      backdrop-filter:blur(14px);
+    }
+    .page-title{font-size:1.4rem;font-weight:650;letter-spacing:.04em;text-transform:uppercase;color:#f9fafb;}
+    .page-subtitle{font-size:.9rem;color:var(--muted);margin-top:4px;}
+    .badge{padding:4px 10px;border-radius:999px;font-size:.75rem;border:1px solid rgba(148,163,184,.6);color:var(--muted);display:inline-flex;align-items:center;gap:6px;background:rgba(15,23,42,.6);}
+    .badge-dot{width:7px;height:7px;border-radius:999px;background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.8);}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+
+    .section-card{
+      background:radial-gradient(circle at top left,rgba(148,163,184,.24) 0,rgba(15,23,42,.7) 55%);
+      border-radius:var(--radius-lg);padding:18px;border:1px solid rgba(15,23,42,.9);
+      box-shadow:var(--shadow-soft);position:relative;overflow:hidden;
+    }
+    .section-card::before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(circle at top right,rgba(59,130,246,.18),transparent 55%);
+      opacity:.65;pointer-events:none;
+    }
+    .section-header{position:relative;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;z-index:1;}
+    .section-title{display:flex;flex-direction:column;gap:2px;}
+    .section-title-main{font-size:.95rem;font-weight:650;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+    .section-title-main span.icon{font-size:1.05rem;}
+    .section-title-sub{font-size:.76rem;color:var(--muted);}
+    .pill{padding:4px 9px;border-radius:999px;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;border:1px solid rgba(148,163,184,.7);background:rgba(15,23,42,.7);color:var(--muted);}
+
+    .faction-card{
+      position:relative;z-index:1;margin-top:10px;padding:10px 11px 9px;
+      border-radius:var(--radius-md);
+      background:linear-gradient(145deg,rgba(15,23,42,.9),rgba(17,24,39,.96));
+      border:1px solid rgba(31,41,55,.9);box-shadow:0 10px 28px rgba(0,0,0,.6);
+    }
+    .faction-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+    .faction-name{font-size:.9rem;font-weight:600;display:flex;align-items:center;gap:6px;}
+    .faction-index{font-size:.78rem;color:var(--muted);padding:2px 7px;border-radius:999px;border:1px solid rgba(55,65,81,.9);background:rgba(15,23,42,.9);}
+    .status-pill{padding:3px 8px;border-radius:999px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;display:inline-flex;align-items:center;gap:6px;border:1px solid;}
+    .status-pill span.dot{width:7px;height:7px;border-radius:999px;}
+    .status-open{border-color:rgba(34,197,94,.6);background:rgba(22,163,74,.08);color:#bbf7d0;}
+    .status-open span.dot{background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.8);}
+    .status-closed{border-color:rgba(248,113,113,.7);background:rgba(127,29,29,.35);color:#fecaca;}
+    .status-closed span.dot{background:#ef4444;box-shadow:0 0 10px rgba(239,68,68,.9);}
+    .field-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.9fr);gap:3px 12px;font-size:.78rem;margin-top:4px;}
+    .field-label{color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-size:.7rem;}
+    .field-value{color:#e5e7eb;font-weight:500;}
+    .leaders-list{display:grid;gap:2px;}
+    .discord-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:999px;background:rgba(15,23,42,.9);border:1px solid rgba(55,65,81,.9);font-size:.7rem;color:#c7d2fe;}
+    .discord-tag span.hash{color:#6366f1;}
+    @media (max-width:720px){
+      .page-header{flex-direction:column;align-items:flex-start;gap:10px;}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <div>
+        <div class="page-title">MTA RP – Aktív Frakciók</div>
+        <p class="page-subtitle">Frakció státuszok, leaderek és Discord elérhetőségek egy helyen.</p>
+      </div>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Szerver frakciók · Live lista
+      </div>
+    </header>
+
+    <section id="factionsGrid" class="grid"></section>
+  </main>
+
+  <script>
+    async function loadFactions() {
+      try {
+        const res = await fetch('factions.json');
+        const data = await res.json();
+        renderFactions(data.categories || []);
+      } catch (e) {
+        document.getElementById('factionsGrid').innerHTML =
+          '<p>Nem sikerült betölteni a frakció adatokat.</p>';
+      }
+    }
+
+    function createFactionCard(f) {
+      const statusClass = f.statusType === 'open' ? 'status-open' : 'status-closed';
+      const coleadersHtml = (f.coleaders || [])
+        .map(c => `
+          <span>${c.name}
+            <span class="discord-tag">
+              <span class="hash">#</span>${c.discord}
+            </span>
+          </span>
+        `).join('');
+
+      return `
+        <div class="faction-card">
+          <div class="faction-header">
+            <div class="faction-name">
+              <span class="faction-index">#${f.index}</span>
+              ${f.name}
+            </div>
+            <div class="status-pill ${statusClass}">
+              <span class="dot"></span>
+              ${f.status}
+            </div>
+          </div>
+          <div class="field-grid">
+            <div class="field-label">Leader</div>
+            <div class="field-value">
+              ${f.leader.name}
+              <span class="discord-tag">
+                <span class="hash">#</span>${f.leader.discord}
+              </span>
+            </div>
+
+            <div class="field-label">Al-leaderek</div>
+            <div class="field-value leaders-list">
+              ${coleadersHtml || '<span>-</span>'}
+            </div>
+
+            <div class="field-label">Tagok száma</div>
+            <div class="field-value">${f.members} fő</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderFactions(categories) {
+      const grid = document.getElementById('factionsGrid');
+      grid.innerHTML = categories.map(cat => `
+        <article class="section-card">
+          <div class="section-header">
+            <div class="section-title">
+              <div class="section-title-main">
+                <span class="icon">${cat.icon}</span>
+                ${cat.title}
+              </div>
+              <div class="section-title-sub">${cat.subtitle}</div>
+            </div>
+            <span class="pill">${cat.tag}</span>
+          </div>
+          ${ (cat.factions || []).map(createFactionCard).join('') }
+        </article>
+      `).join('');
+    }
+
+    loadFactions();
+  </script>
+</body>
+</html>
