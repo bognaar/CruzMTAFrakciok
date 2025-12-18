@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": "law",
-      "icon": "🚔1",
+      "icon": "🚔",
       "title": "Rendvédelmi frakciók",
       "subtitle": "Városi rendőrségek és közrendvédelem",
       "tag": "Jog & Rend",
@@ -163,41 +163,7 @@
           ],
           "members": 11
         }
-            {
-      "id": "law",
-      "icon": "🚔",
-      "title": "Rendvédelmi frakciók1",
-      "subtitle": "Városi rendőrségek és közrendvédelem",
-      "tag": "Jog & Rend",
-      "factions": [
-        {
-          "name": "LSPD",
-          "index": 1,
-          "status": "Elérhető (FK)",
-          "statusType": "open",
-          "leader": { "name": "John_Marshall", "discord": "johnmarshall#1023" },
-          "coleaders": [
-            { "name": "Michael_Rivera", "discord": "mrivera#3344" },
-            { "name": "Daniel_Woods", "discord": "dwoods#7781" }
-          ],
-          "members": 24
-        },
-        {
-          "name": "SFPD",
-          "index": 2,
-          "status": "Nem elérhető",
-          "statusType": "closed",
-          "leader": { "name": "Kevin_Stone", "discord": "kstone#5512" },
-          "coleaders": [
-            { "name": "Alex_Brown", "discord": "abrown#2048" }
-          ],
-          "members": 18
-        }
-      ]
-    },
       ]
     }
   ]
 }
-
-
