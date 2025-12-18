@@ -12,21 +12,22 @@
           "index": 1,
           "status": "Elérhető (FK)",
           "statusType": "open",
-          "leader": { "name": "John_Marshall", "discord": "johnmarshall#1023" },
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Michael_Rivera", "discord": "mrivera#3344" },
-            { "name": "Daniel_Woods", "discord": "dwoods#7781" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 24
         },
         {
           "name": "SFPD",
           "index": 2,
-          "status": "Nem elérhető",
-          "statusType": "closed",
-          "leader": { "name": "Kevin_Stone", "discord": "kstone#5512" },
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Alex_Brown", "discord": "abrown#2048" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 18
         }
@@ -44,9 +45,10 @@
           "index": 1,
           "status": "Elérhető (FK)",
           "statusType": "open",
-          "leader": { "name": "Sarah_Johnson", "discord": "sjohnson#6190" },
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Emily_Carter", "discord": "ecarter#4401" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 16
         }
@@ -62,11 +64,12 @@
         {
           "name": "SANG",
           "index": 1,
-          "status": "Nem elérhető",
-          "statusType": "closed",
-          "leader": { "name": "Robert_Hill", "discord": "rhill#9002" },
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Thomas_Lee", "discord": "tlee#3819" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 12
         }
@@ -84,20 +87,22 @@
           "index": 1,
           "status": "Elérhető (FK)",
           "statusType": "open",
-          "leader": { "name": "Marco_Rossi", "discord": "mrossi#6667" },
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Luca_Bianchi", "discord": "lbianchi#1109" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 22
         },
         {
           "name": "Mexican Cartel",
           "index": 2,
-          "status": "Nem elérhető",
-          "statusType": "closed",
-          "leader": { "name": "Carlos_Mendez", "discord": "cmendez#7070" },
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Javier_Morales", "discord": "jmorales#8893" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 19
         }
@@ -115,20 +120,22 @@
           "index": 1,
           "status": "Elérhető (FK)",
           "statusType": "open",
-          "leader": { "name": "Sean_Johnson", "discord": "sjohnson_gsf#3210" },
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Andre_Wilson", "discord": "awilson#5566" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 28
         },
         {
           "name": "Ballas Gang",
           "index": 2,
-          "status": "Nem elérhető",
-          "statusType": "closed",
-          "leader": { "name": "Victor_Price", "discord": "vprice#7788" },
+          "status": "Elérhető (FK)",
+          "statusType": "open",
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Ryan_Taylor", "discord": "rtaylor#9921" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 20
         }
@@ -146,9 +153,10 @@
           "index": 1,
           "status": "Elérhető (FK)",
           "statusType": "open",
-          "leader": { "name": "Olivia_Kent", "discord": "okent#1357" },
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Peter_Clark", "discord": "pclark#2468" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 14
         },
@@ -157,9 +165,10 @@
           "index": 2,
           "status": "Elérhető (FK)",
           "statusType": "open",
-          "leader": { "name": "Brian_Miller", "discord": "bmiller#8642" },
+          "leader": { "name": "Teszt Elek", "discord": "" },
           "coleaders": [
-            { "name": "Jason_White", "discord": "jwhite#9753" }
+            { "name": "", "discord": "" },
+            { "name": "", "discord": "" }
           ],
           "members": 11
         }
@@ -167,3 +176,4 @@
     }
   ]
 }
+
